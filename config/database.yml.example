@@ -1,0 +1,17 @@
+# Update this and use with a postgres database.
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  user: user
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: bookshelf-api_development
+
+test:
+  <<: *default
+  database: bookshelf-api_test
